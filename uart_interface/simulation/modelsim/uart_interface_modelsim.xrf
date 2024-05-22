@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, D:/Study/UIT/DA/DA1/verilog/uart_interface/uart_rx.v
+source_file = 1, D:/Study/UIT/DA/DA1/verilog/uart_interface/uart_rx_tb.v
+source_file = 1, D:/Study/UIT/DA/DA1/verilog/uart_interface/uart_tx.v
+source_file = 1, D:/Study/UIT/DA/DA1/verilog/uart_interface/uart.v
+source_file = 1, D:/Study/UIT/DA/DA1/verilog/uart_interface/uart_rx_testing.v
+source_file = 1, D:/Study/UIT/DA/DA1/verilog/uart_interface/uart_tx_testing.v
+source_file = 1, D:/Study/UIT/DA/DA1/verilog/uart_interface/db/uart_interface.cbx.xml
+design_name = uart_tx_testing
+instance = comp, \i_clock~I\, i_clock, uart_tx_testing, 1
+instance = comp, \i_tx_start~I\, i_tx_start, uart_tx_testing, 1
+instance = comp, \o_tx_done~I\, o_tx_done, uart_tx_testing, 1
+instance = comp, \o_tx_serial~I\, o_tx_serial, uart_tx_testing, 1
+instance = comp, \o_tx_active~I\, o_tx_active, uart_tx_testing, 1

@@ -1,0 +1,27 @@
+module uart_rx_testing#(
+	parameter divisor = 50000000 / 9600
+)
+(
+	input			i_clock,
+	input 		i_rx_serial,
+	output[8:0] o_rx_data,
+	output		o_rx_done,
+	output reg	o_checking
+);
+
+uart_rx UART_RX(
+	.i_clock(i_clock),
+	.i_rx_received(i_rx_serial),
+	.o_rx_data(o_rx_data),
+	.o_rx_done(o_rx_done)
+);
+
+always@(posedge i_clock) begin
+	if(o_rx_done == 1'b1) begin
+		if(o_rx_data == 9'b101010101)
+			o_checking <= 0;
+		else o_checking <= 1;
+	end
+end
+
+endmodule

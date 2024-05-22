@@ -1,0 +1,65 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Study\UIT\DA\DA1\verilog\image_processing\simulation\modelsim
+vimage_mem
+I1;=9NGz2X_D?D@3_0POWT0
+VfNH6l`ZWB[9WfjW=<TFGG1
+Z1 dD:\Study\UIT\DA\DA1\verilog\image_processing\simulation\modelsim
+w1710851005
+8D:/Study/UIT/DA/DA1/verilog/image_processing/image_mem.v
+FD:/Study/UIT/DA/DA1/verilog/image_processing/image_mem.v
+L0 39
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/Study/UIT/DA/DA1/verilog/image_processing -O0
+!i10b 1
+!s100 C@RS^z:0R@=EH<MEn46TB3
+!s85 0
+!s108 1710865754.377000
+!s107 D:/Study/UIT/DA/DA1/verilog/image_processing/image_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/DA/DA1/verilog/image_processing|D:/Study/UIT/DA/DA1/verilog/image_processing/image_mem.v|
+!s101 -O0
+vimg_processing
+ITHnn`^T9nkF4TG<WX4FD21
+VAYJ<@]PNg_]=W1I_6ogFI3
+R1
+w1710865636
+8D:/Study/UIT/DA/DA1/verilog/image_processing/img_processing.v
+FD:/Study/UIT/DA/DA1/verilog/image_processing/img_processing.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 >an?iPgN]TDHP4>9H4IIN0
+!s85 0
+!s108 1710865754.431000
+!s107 D:/Study/UIT/DA/DA1/verilog/image_processing/img_processing.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/DA/DA1/verilog/image_processing|D:/Study/UIT/DA/DA1/verilog/image_processing/img_processing.v|
+!s101 -O0
+vimg_processing_tb
+!i10b 1
+!s100 3RzJeVIY7F>iZgWV_>CQ;0
+Iz5:1cl]TK<H5a1b`MH13:1
+VS?075TPH1BH=JDaU]8VCX2
+R1
+w1710865745
+8D:/Study/UIT/DA/DA1/verilog/image_processing/img_processing_tb.v
+FD:/Study/UIT/DA/DA1/verilog/image_processing/img_processing_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1710865754.477000
+!s107 D:/Study/UIT/DA/DA1/verilog/image_processing/img_processing_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/DA/DA1/verilog/image_processing|D:/Study/UIT/DA/DA1/verilog/image_processing/img_processing_tb.v|
+!s101 -O0
+R3
+R4

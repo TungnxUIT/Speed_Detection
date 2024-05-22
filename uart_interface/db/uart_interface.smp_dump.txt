@@ -1,0 +1,8 @@
+
+State Machine - |uart_tx_testing|uart_tx:tx|state
+Name state.s_tx_stop_bit state.s_tx_data_bit state.s_tx_start_bit state.000 state.s_cleanup 
+state.000 0 0 0 0 0 
+state.s_tx_start_bit 0 0 1 1 0 
+state.s_tx_data_bit 0 1 0 1 0 
+state.s_tx_stop_bit 1 0 0 1 0 
+state.s_cleanup 0 0 0 1 1 

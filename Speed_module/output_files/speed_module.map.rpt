@@ -1,5 +1,5 @@
 Analysis & Synthesis report for speed_module
-Thu May 16 15:45:10 2024
+Wed May 22 21:39:42 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,7 +14,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |top|lcd:lcd|state_c
-  9. State Machine - |top|speed_module:speed|speed:inst_speed|state
+  9. State Machine - |top|speed:inst_speed|state
  10. State Machine - |top|uart_rx:uart|state
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
@@ -23,28 +23,27 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
  16. Parameter Settings for User Entity Instance: Top-level Entity: |top
  17. Parameter Settings for User Entity Instance: uart_rx:uart
- 18. Parameter Settings for User Entity Instance: speed_module:speed
- 19. Parameter Settings for User Entity Instance: speed_module:speed|speed:inst_speed
- 20. Parameter Settings for User Entity Instance: speed_module:speed|location_mem:inst_location_mem
- 21. Parameter Settings for User Entity Instance: speed_module:speed|speed_mem:inst_speed_mem
- 22. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod3
- 23. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod2
- 24. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div3
- 25. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div2
- 26. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div0
- 27. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod0
- 28. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div1
- 29. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod1
- 30. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div0
- 31. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod3
- 32. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod2
- 33. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div3
- 34. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod0
- 35. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div1
- 36. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div2
- 37. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod1
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
+ 18. Parameter Settings for User Entity Instance: speed:inst_speed
+ 19. Parameter Settings for User Entity Instance: location_mem:inst_location_mem
+ 20. Parameter Settings for User Entity Instance: speed_mem:inst_speed_mem
+ 21. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod3
+ 22. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod2
+ 23. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div3
+ 24. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div2
+ 25. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div0
+ 26. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod0
+ 27. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div1
+ 28. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod1
+ 29. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div0
+ 30. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod3
+ 31. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod2
+ 32. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div3
+ 33. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod0
+ 34. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div1
+ 35. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div2
+ 36. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod1
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -70,7 +69,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 16 15:45:10 2024           ;
+; Analysis & Synthesis Status        ; Successful - Wed May 22 21:39:42 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; speed_module                                    ;
 ; Top-level Entity Name              ; top                                             ;
@@ -198,7 +197,6 @@ applicable agreement for further details.
 ; speed.v                          ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/speed.v                            ;         ;
 ; location_mem.v                   ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/location_mem.v                     ;         ;
 ; speed_mem.v                      ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_mem.v                        ;         ;
-; speed_module.v                   ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module.v                     ;         ;
 ; top.v                            ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/top.v                              ;         ;
 ; lcd.v                            ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/lcd.v                              ;         ;
 ; number_display.v                 ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/number_display.v                   ;         ;
@@ -324,10 +322,9 @@ applicable agreement for further details.
 ;             |lpm_divide_45m:auto_generated|  ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod3|lpm_divide_45m:auto_generated                                                   ; work         ;
 ;                |sign_div_unsign_bkh:divider| ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod3|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
 ;                   |alt_u_div_ove:divider|    ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod3|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_ove:divider ; work         ;
-;    |speed_module:speed|                      ; 8868 (0)          ; 6318 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed_module:speed                                                                                                             ; work         ;
-;       |location_mem:inst_location_mem|       ; 5561 (5561)       ; 4096 (4096)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed_module:speed|location_mem:inst_location_mem                                                                              ; work         ;
-;       |speed:inst_speed|                     ; 299 (299)         ; 158 (158)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed_module:speed|speed:inst_speed                                                                                            ; work         ;
-;       |speed_mem:inst_speed_mem|             ; 3008 (3008)       ; 2064 (2064)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed_module:speed|speed_mem:inst_speed_mem                                                                                    ; work         ;
+;    |location_mem:inst_location_mem|          ; 5561 (5561)       ; 4096 (4096)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|location_mem:inst_location_mem                                                                                                 ; work         ;
+;    |speed:inst_speed|                        ; 299 (299)         ; 158 (158)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed:inst_speed                                                                                                               ; work         ;
+;    |speed_mem:inst_speed_mem|                ; 3008 (3008)       ; 2064 (2064)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed_mem:inst_speed_mem                                                                                                       ; work         ;
 ;    |uart_rx:uart|                            ; 64 (64)           ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_rx:uart                                                                                                                   ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -354,7 +351,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top|speed_module:speed|speed:inst_speed|state                                                                                        ;
+; State Machine - |top|speed:inst_speed|state                                                                                                           ;
 +------------------+--------------+--------------+---------------+------------------+---------------+---------------+----------------+------------------+
 ; Name             ; state.wait_y ; state.wait_x ; state.wait_id ; state.math_state ; state.y_state ; state.x_state ; state.id_state ; state.idle_state ;
 +------------------+--------------+--------------+---------------+------------------+---------------+---------------+----------------+------------------+
@@ -409,71 +406,71 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                      ;
-+----------------------------------------------+----------------------------------------------------------+
-; Register name                                ; Reason for Removal                                       ;
-+----------------------------------------------+----------------------------------------------------------+
-; lcd:lcd|number_display:number1|char1[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char1[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char2[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char2[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char3[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char3[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char4[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char4[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char5[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char5[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char6[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char6[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char1[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char1[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char2[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char2[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char3[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char3[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char4[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char4[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char5[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char5[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char6[6,7]    ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char6[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
-; speed_module:speed|speed:inst_speed|o_idx[8] ; Stuck at GND due to stuck port data_in                   ;
-; speed_module:speed|speed:inst_speed|o_idx[0] ; Merged with speed_module:speed|speed:inst_speed|o_id0[0] ;
-; speed_module:speed|speed:inst_speed|o_idy[0] ; Merged with speed_module:speed|speed:inst_speed|o_id0[0] ;
-; speed_module:speed|speed:inst_speed|o_idx[1] ; Merged with speed_module:speed|speed:inst_speed|o_id0[1] ;
-; speed_module:speed|speed:inst_speed|o_idy[1] ; Merged with speed_module:speed|speed:inst_speed|o_id0[1] ;
-; speed_module:speed|speed:inst_speed|o_idx[2] ; Merged with speed_module:speed|speed:inst_speed|o_id0[2] ;
-; speed_module:speed|speed:inst_speed|o_idy[2] ; Merged with speed_module:speed|speed:inst_speed|o_id0[2] ;
-; speed_module:speed|speed:inst_speed|o_idx[3] ; Merged with speed_module:speed|speed:inst_speed|o_id0[3] ;
-; speed_module:speed|speed:inst_speed|o_idy[3] ; Merged with speed_module:speed|speed:inst_speed|o_id0[3] ;
-; speed_module:speed|speed:inst_speed|o_idx[4] ; Merged with speed_module:speed|speed:inst_speed|o_id0[4] ;
-; speed_module:speed|speed:inst_speed|o_idy[4] ; Merged with speed_module:speed|speed:inst_speed|o_id0[4] ;
-; speed_module:speed|speed:inst_speed|o_idx[5] ; Merged with speed_module:speed|speed:inst_speed|o_id0[5] ;
-; speed_module:speed|speed:inst_speed|o_idy[5] ; Merged with speed_module:speed|speed:inst_speed|o_id0[5] ;
-; speed_module:speed|speed:inst_speed|o_idx[6] ; Merged with speed_module:speed|speed:inst_speed|o_id0[6] ;
-; speed_module:speed|speed:inst_speed|o_idy[6] ; Merged with speed_module:speed|speed:inst_speed|o_id0[6] ;
-; speed_module:speed|speed:inst_speed|o_idx[7] ; Merged with speed_module:speed|speed:inst_speed|o_id0[7] ;
-; speed_module:speed|speed:inst_speed|o_idy[8] ; Merged with speed_module:speed|speed:inst_speed|o_id0[7] ;
-; lcd:lcd|state_c~13                           ; Lost fanout                                              ;
-; lcd:lcd|state_c~14                           ; Lost fanout                                              ;
-; lcd:lcd|state_c~15                           ; Lost fanout                                              ;
-; lcd:lcd|state_c~16                           ; Lost fanout                                              ;
-; speed_module:speed|speed:inst_speed|state~4  ; Lost fanout                                              ;
-; speed_module:speed|speed:inst_speed|state~5  ; Lost fanout                                              ;
-; speed_module:speed|speed:inst_speed|state~6  ; Lost fanout                                              ;
-; uart_rx:uart|state~2                         ; Lost fanout                                              ;
-; uart_rx:uart|state~3                         ; Lost fanout                                              ;
-; lcd:lcd|number_display:number1|char4[2]      ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char1[2]      ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char1[2]      ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char4[2]      ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char4[3]      ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char1[3]      ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number1|char1[3]      ; Stuck at GND due to stuck port data_in                   ;
-; lcd:lcd|number_display:number0|char4[3]      ; Stuck at GND due to stuck port data_in                   ;
-; Total Number of Removed Registers = 82       ;                                                          ;
-+----------------------------------------------+----------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++-------------------------------------------+----------------------------------------+
+; Register name                             ; Reason for Removal                     ;
++-------------------------------------------+----------------------------------------+
+; lcd:lcd|number_display:number1|char1[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char1[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char2[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char2[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char3[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char3[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char4[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char4[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char5[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char5[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char6[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char6[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char1[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char1[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char2[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char2[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char3[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char3[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char4[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char4[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char5[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char5[4,5] ; Stuck at VCC due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char6[6,7] ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char6[4,5] ; Stuck at VCC due to stuck port data_in ;
+; speed:inst_speed|o_idx[8]                 ; Stuck at GND due to stuck port data_in ;
+; speed:inst_speed|o_idx[0]                 ; Merged with speed:inst_speed|o_id0[0]  ;
+; speed:inst_speed|o_idy[0]                 ; Merged with speed:inst_speed|o_id0[0]  ;
+; speed:inst_speed|o_idx[1]                 ; Merged with speed:inst_speed|o_id0[1]  ;
+; speed:inst_speed|o_idy[1]                 ; Merged with speed:inst_speed|o_id0[1]  ;
+; speed:inst_speed|o_idx[2]                 ; Merged with speed:inst_speed|o_id0[2]  ;
+; speed:inst_speed|o_idy[2]                 ; Merged with speed:inst_speed|o_id0[2]  ;
+; speed:inst_speed|o_idx[3]                 ; Merged with speed:inst_speed|o_id0[3]  ;
+; speed:inst_speed|o_idy[3]                 ; Merged with speed:inst_speed|o_id0[3]  ;
+; speed:inst_speed|o_idx[4]                 ; Merged with speed:inst_speed|o_id0[4]  ;
+; speed:inst_speed|o_idy[4]                 ; Merged with speed:inst_speed|o_id0[4]  ;
+; speed:inst_speed|o_idx[5]                 ; Merged with speed:inst_speed|o_id0[5]  ;
+; speed:inst_speed|o_idy[5]                 ; Merged with speed:inst_speed|o_id0[5]  ;
+; speed:inst_speed|o_idx[6]                 ; Merged with speed:inst_speed|o_id0[6]  ;
+; speed:inst_speed|o_idy[6]                 ; Merged with speed:inst_speed|o_id0[6]  ;
+; speed:inst_speed|o_idx[7]                 ; Merged with speed:inst_speed|o_id0[7]  ;
+; speed:inst_speed|o_idy[8]                 ; Merged with speed:inst_speed|o_id0[7]  ;
+; lcd:lcd|state_c~13                        ; Lost fanout                            ;
+; lcd:lcd|state_c~14                        ; Lost fanout                            ;
+; lcd:lcd|state_c~15                        ; Lost fanout                            ;
+; lcd:lcd|state_c~16                        ; Lost fanout                            ;
+; speed:inst_speed|state~4                  ; Lost fanout                            ;
+; speed:inst_speed|state~5                  ; Lost fanout                            ;
+; speed:inst_speed|state~6                  ; Lost fanout                            ;
+; uart_rx:uart|state~2                      ; Lost fanout                            ;
+; uart_rx:uart|state~3                      ; Lost fanout                            ;
+; lcd:lcd|number_display:number1|char4[2]   ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char1[2]   ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char1[2]   ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char4[2]   ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char4[3]   ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char1[3]   ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number1|char1[3]   ; Stuck at GND due to stuck port data_in ;
+; lcd:lcd|number_display:number0|char4[3]   ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 82    ;                                        ;
++-------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -502,278 +499,278 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[255][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[254][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[253][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[252][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[251][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[250][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[249][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[248][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[247][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[246][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[245][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[244][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[243][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[242][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[241][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[240][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[239][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[238][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[237][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[236][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[235][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[234][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[233][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[232][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[231][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[230][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[229][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[228][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[227][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[226][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[225][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[224][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[223][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[222][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[221][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[220][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[219][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[218][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[217][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[216][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[215][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[214][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[213][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[212][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[211][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[210][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[209][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[208][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[207][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[206][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[205][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[204][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[203][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[202][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[201][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[200][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[199][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[198][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[197][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[196][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[195][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[194][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[193][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[192][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[191][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[190][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[189][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[188][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[187][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[186][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[185][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[184][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[183][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[182][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[181][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[180][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[179][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[178][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[177][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[176][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[175][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[174][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[173][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[172][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[171][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[170][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[169][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[168][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[167][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[166][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[165][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[164][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[163][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[162][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[161][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[160][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[159][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[158][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[157][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[156][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[155][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[154][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[153][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[152][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[151][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[150][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[149][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[148][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[147][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[146][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[145][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[144][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[143][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[142][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[141][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[140][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[139][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[138][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[137][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[136][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[135][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[134][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[133][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[132][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[131][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[130][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[129][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[128][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[127][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[126][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[125][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[124][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[123][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[122][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[121][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[120][6] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[119][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[118][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[117][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[116][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[115][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[114][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[113][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[112][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[111][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[110][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[109][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[108][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[107][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[106][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[105][4] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[104][7] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[103][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[102][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[101][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[100][1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[99][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[98][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[97][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[96][0]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[95][0]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[94][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[93][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[92][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[91][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[90][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[89][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[88][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[87][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[86][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[85][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[84][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[83][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[82][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[81][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[80][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[79][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[78][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[77][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[76][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[75][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[74][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[73][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[72][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[71][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[70][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[69][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[68][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[67][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[66][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[65][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[64][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[63][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[62][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[61][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[60][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[59][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[58][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[57][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[56][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[55][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[54][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[53][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[52][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[51][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[50][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[49][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[48][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[47][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[46][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[45][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[44][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[43][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[42][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[41][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[40][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[39][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[38][0]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[37][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[36][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[35][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[34][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[33][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[32][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[31][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[30][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[29][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[28][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[27][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[26][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[25][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[24][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[23][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[22][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[21][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[20][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[19][1]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[18][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[17][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[16][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[15][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[14][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[13][5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[12][7]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[11][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[10][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[9][6]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[8][1]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[7][5]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[6][2]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[5][0]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[4][0]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[3][3]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[2][3]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[1][3]   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[0][3]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|speed_module:speed|speed:inst_speed|count0[21]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|speed_module:speed|speed:inst_speed|count1[15]                ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |top|uart_rx:uart|r_clock_count[11]                                ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|uart_rx:uart|r_bit_index                                      ;
-; 32:1               ; 4 bits    ; 84 LEs        ; 40 LEs               ; 44 LEs                 ; No         ; |top|lcd:lcd|Mux7                                                  ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |top|speed_module:speed|speed:inst_speed|o_speed                   ;
-; 256:1              ; 8 bits    ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |top|speed_module:speed|speed_mem:inst_speed_mem|Mux7              ;
-; 256:1              ; 8 bits    ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |top|speed_module:speed|speed_mem:inst_speed_mem|Mux13             ;
-; 128:1              ; 16 bits   ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |top|speed_module:speed|location_mem:inst_location_mem|Mux15       ;
-; 258:1              ; 8 bits    ; 1376 LEs      ; 1376 LEs             ; 0 LEs                  ; No         ; |top|speed_module:speed|location_mem:inst_location_mem|Mux8        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[255][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[254][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[253][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[252][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[251][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[250][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[249][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[248][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[247][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[246][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[245][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[244][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[243][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[242][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[241][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[240][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[239][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[238][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[237][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[236][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[235][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[234][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[233][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[232][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[231][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[230][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[229][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[228][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[227][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[226][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[225][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[224][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[223][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[222][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[221][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[220][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[219][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[218][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[217][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[216][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[215][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[214][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[213][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[212][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[211][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[210][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[209][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[208][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[207][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[206][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[205][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[204][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[203][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[202][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[201][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[200][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[199][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[198][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[197][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[196][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[195][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[194][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[193][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[192][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[191][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[190][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[189][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[188][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[187][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[186][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[185][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[184][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[183][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[182][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[181][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[180][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[179][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[178][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[177][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[176][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[175][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[174][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[173][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[172][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[171][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[170][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[169][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[168][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[167][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[166][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[165][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[164][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[163][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[162][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[161][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[160][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[159][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[158][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[157][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[156][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[155][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[154][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[153][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[152][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[151][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[150][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[149][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[148][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[147][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[146][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[145][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[144][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[143][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[142][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[141][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[140][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[139][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[138][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[137][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[136][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[135][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[134][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[133][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[132][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[131][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[130][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[129][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[128][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[127][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[126][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[125][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[124][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[123][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[122][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[121][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[120][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[119][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[118][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[117][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[116][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[115][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[114][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[113][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[112][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[111][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[110][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[109][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[108][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[107][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[106][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[105][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[104][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[103][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[102][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[101][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[100][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[99][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[98][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[97][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[96][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[95][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[94][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[93][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[92][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[91][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[90][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[89][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[88][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[87][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[86][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[85][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[84][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[83][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[82][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[81][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[80][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[79][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[78][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[77][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[76][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[75][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[74][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[73][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[72][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[71][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[70][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[69][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[68][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[67][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[66][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[65][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[64][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[63][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[62][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[61][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[60][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[59][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[58][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[57][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[56][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[55][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[54][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[53][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[52][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[51][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[50][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[49][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[48][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[47][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[46][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[45][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[44][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[43][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[42][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[41][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[40][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[39][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[38][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[37][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[36][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[35][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[34][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[33][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[32][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[31][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[30][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[29][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[28][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[27][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[26][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[25][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[24][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[23][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[22][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[21][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[20][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[19][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[18][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[17][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[16][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[15][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[14][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[13][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[12][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[11][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[10][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[9][6]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[8][1]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[7][5]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[6][2]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[5][0]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[4][0]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[3][3]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[2][3]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[1][3]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|location_mem:inst_location_mem|mem[0][3]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|speed:inst_speed|count0[21]                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|speed:inst_speed|count1[15]                ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |top|uart_rx:uart|r_clock_count[11]             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|uart_rx:uart|r_bit_index                   ;
+; 32:1               ; 4 bits    ; 84 LEs        ; 40 LEs               ; 44 LEs                 ; No         ; |top|lcd:lcd|Mux7                               ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |top|speed:inst_speed|o_speed                   ;
+; 256:1              ; 8 bits    ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |top|speed_mem:inst_speed_mem|Mux7              ;
+; 256:1              ; 8 bits    ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |top|speed_mem:inst_speed_mem|Mux13             ;
+; 128:1              ; 16 bits   ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |top|location_mem:inst_location_mem|Mux15       ;
+; 258:1              ; 8 bits    ; 1376 LEs      ; 1376 LEs             ; 0 LEs                  ; No         ; |top|location_mem:inst_location_mem|Mux8        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -798,47 +795,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: speed_module:speed ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; width          ; 8     ; Signed Integer                         ;
-; depth          ; 8     ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: speed:inst_speed ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; width          ; 8     ; Signed Integer                       ;
+; depth          ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: speed_module:speed|speed:inst_speed ;
-+----------------+-------+---------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                    ;
-+----------------+-------+---------------------------------------------------------+
-; width          ; 8     ; Signed Integer                                          ;
-; depth          ; 8     ; Signed Integer                                          ;
-+----------------+-------+---------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: location_mem:inst_location_mem ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; width          ; 8     ; Signed Integer                                     ;
+; depth          ; 9     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: speed_module:speed|location_mem:inst_location_mem ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------+
-; width          ; 8     ; Signed Integer                                                        ;
-; depth          ; 9     ; Signed Integer                                                        ;
-+----------------+-------+-----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: speed_module:speed|speed_mem:inst_speed_mem ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; width          ; 8     ; Signed Integer                                                  ;
-; depth          ; 8     ; Signed Integer                                                  ;
-+----------------+-------+-----------------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: speed_mem:inst_speed_mem ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; width          ; 8     ; Signed Integer                               ;
+; depth          ; 8     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1225,7 +1211,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 16 15:44:53 2024
+    Info: Processing started: Wed May 22 21:39:24 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off speed_module -c speed_module
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /study/uit/da/da1/verilog/uart_interface/uart_rx.v
@@ -1240,11 +1226,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file locatio
     Info (12023): Found entity 1: location_mem
 Info (12021): Found 1 design units, including 1 entities, in source file speed_mem.v
     Info (12023): Found entity 1: speed_mem
-Warning (10275): Verilog HDL Module Instantiation warning at speed_module.v(83): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at speed_module.v(82): ignored dangling comma in List of Port Connections
 Info (12021): Found 1 design units, including 1 entities, in source file speed_module.v
     Info (12023): Found entity 1: speed_module
 Info (12021): Found 1 design units, including 1 entities, in source file speed_module_tb.v
     Info (12023): Found entity 1: speed_module_tb
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(85): ignored dangling comma in List of Port Connections
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
     Info (12023): Found entity 1: top
 Info (12021): Found 1 design units, including 1 entities, in source file top_tb.v
@@ -1266,14 +1253,13 @@ Warning (10230): Verilog HDL assignment warning at uart_rx.v(55): truncated valu
 Warning (10230): Verilog HDL assignment warning at uart_rx.v(64): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at uart_rx.v(73): truncated value with size 32 to match size of target (3)
 Warning (10230): Verilog HDL assignment warning at uart_rx.v(84): truncated value with size 32 to match size of target (16)
-Info (12128): Elaborating entity "speed_module" for hierarchy "speed_module:speed"
-Info (12128): Elaborating entity "speed" for hierarchy "speed_module:speed|speed:inst_speed"
+Info (12128): Elaborating entity "speed" for hierarchy "speed:inst_speed"
 Warning (10036): Verilog HDL or VHDL warning at speed.v(238): object "s" assigned a value but never read
 Warning (10230): Verilog HDL assignment warning at speed.v(110): truncated value with size 32 to match size of target (9)
 Warning (10230): Verilog HDL assignment warning at speed.v(238): truncated value with size 3 to match size of target (1)
-Info (12128): Elaborating entity "location_mem" for hierarchy "speed_module:speed|location_mem:inst_location_mem"
+Info (12128): Elaborating entity "location_mem" for hierarchy "location_mem:inst_location_mem"
 Warning (10240): Verilog HDL Always Construct warning at location_mem.v(20): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
-Info (12128): Elaborating entity "speed_mem" for hierarchy "speed_module:speed|speed_mem:inst_speed_mem"
+Info (12128): Elaborating entity "speed_mem" for hierarchy "speed_mem:inst_speed_mem"
 Warning (10240): Verilog HDL Always Construct warning at speed_mem.v(23): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
 Info (12128): Elaborating entity "lcd" for hierarchy "lcd:lcd"
 Warning (10240): Verilog HDL Always Construct warning at lcd.v(157): inferring latch(es) for variable "prev_data1", which holds its previous value in one or more paths through the always construct
@@ -1376,10 +1362,10 @@ Info (21057): Implemented 13945 device resources after synthesis - the final res
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 12 output pins
     Info (21061): Implemented 13930 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 29 warnings
     Info: Peak virtual memory: 4656 megabytes
-    Info: Processing ended: Thu May 16 15:45:10 2024
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Processing ended: Wed May 22 21:39:42 2024
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:17
 
 

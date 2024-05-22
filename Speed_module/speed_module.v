@@ -51,7 +51,6 @@ speed#(.width(width), .depth(depth)) inst_speed
 	.o_wen_location(wen_location),
 	.o_change_id0(change_id0),
 	.o_change_id1(change_id1)
-	//.x(x), .y(y)
 );
 
 location_mem#(.width(width), .depth(depth + 1)) inst_location_mem(

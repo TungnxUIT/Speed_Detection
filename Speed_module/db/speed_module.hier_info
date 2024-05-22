@@ -1,6 +1,6 @@
 |top
-clk => clk.IN3
-rst_n => rst_n.IN2
+clk => clk.IN5
+rst_n => rst_n.IN4
 i_rx_serial => i_rx_serial.IN1
 lcd_on <= lcd:lcd.lcd_on
 lcd_rs <= lcd:lcd.lcd_rs
@@ -60,53 +60,7 @@ o_rx_data[7] <= r_rx_data[7].DB_MAX_OUTPUT_PORT_TYPE
 o_rx_done <= r_rx_done.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|speed_module:speed
-clk => clk.IN3
-rst_n => rst_n.IN3
-start => start.IN1
-i_car[0] => i_car[0].IN1
-i_car[1] => i_car[1].IN1
-i_car[2] => i_car[2].IN1
-i_car[3] => i_car[3].IN1
-i_car[4] => i_car[4].IN1
-i_car[5] => i_car[5].IN1
-i_car[6] => i_car[6].IN1
-i_car[7] => i_car[7].IN1
-o_speed0[0] <= speed_mem:inst_speed_mem.o_speed0
-o_speed0[1] <= speed_mem:inst_speed_mem.o_speed0
-o_speed0[2] <= speed_mem:inst_speed_mem.o_speed0
-o_speed0[3] <= speed_mem:inst_speed_mem.o_speed0
-o_speed0[4] <= speed_mem:inst_speed_mem.o_speed0
-o_speed0[5] <= speed_mem:inst_speed_mem.o_speed0
-o_speed0[6] <= speed_mem:inst_speed_mem.o_speed0
-o_speed0[7] <= speed_mem:inst_speed_mem.o_speed0
-o_speed1[0] <= speed_mem:inst_speed_mem.o_speed1
-o_speed1[1] <= speed_mem:inst_speed_mem.o_speed1
-o_speed1[2] <= speed_mem:inst_speed_mem.o_speed1
-o_speed1[3] <= speed_mem:inst_speed_mem.o_speed1
-o_speed1[4] <= speed_mem:inst_speed_mem.o_speed1
-o_speed1[5] <= speed_mem:inst_speed_mem.o_speed1
-o_speed1[6] <= speed_mem:inst_speed_mem.o_speed1
-o_speed1[7] <= speed_mem:inst_speed_mem.o_speed1
-o_id0[0] <= speed_mem:inst_speed_mem.o_id0
-o_id0[1] <= speed_mem:inst_speed_mem.o_id0
-o_id0[2] <= speed_mem:inst_speed_mem.o_id0
-o_id0[3] <= speed_mem:inst_speed_mem.o_id0
-o_id0[4] <= speed_mem:inst_speed_mem.o_id0
-o_id0[5] <= speed_mem:inst_speed_mem.o_id0
-o_id0[6] <= speed_mem:inst_speed_mem.o_id0
-o_id0[7] <= speed_mem:inst_speed_mem.o_id0
-o_id1[0] <= speed_mem:inst_speed_mem.o_id1
-o_id1[1] <= speed_mem:inst_speed_mem.o_id1
-o_id1[2] <= speed_mem:inst_speed_mem.o_id1
-o_id1[3] <= speed_mem:inst_speed_mem.o_id1
-o_id1[4] <= speed_mem:inst_speed_mem.o_id1
-o_id1[5] <= speed_mem:inst_speed_mem.o_id1
-o_id1[6] <= speed_mem:inst_speed_mem.o_id1
-o_id1[7] <= speed_mem:inst_speed_mem.o_id1
-
-
-|top|speed_module:speed|speed:inst_speed
+|top|speed:inst_speed
 clk => id_reg1[0].CLK
 clk => id_reg1[1].CLK
 clk => id_reg1[2].CLK
@@ -428,7 +382,7 @@ o_change_id0 <= o_change_id0~reg0.DB_MAX_OUTPUT_PORT_TYPE
 o_change_id1 <= o_change_id1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|speed_module:speed|location_mem:inst_location_mem
+|top|location_mem:inst_location_mem
 clk => mem[0][0].CLK
 clk => mem[0][1].CLK
 clk => mem[0][2].CLK
@@ -21089,7 +21043,7 @@ o_b[6] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
 o_b[7] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|speed_module:speed|speed_mem:inst_speed_mem
+|top|speed_mem:inst_speed_mem
 clk => register[0][0].CLK
 clk => register[0][1].CLK
 clk => register[0][2].CLK

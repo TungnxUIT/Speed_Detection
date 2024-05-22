@@ -12,7 +12,7 @@ state_c.WRITE 0 0 1 0 0 0 0 0 0 1
 state_c.ROW2_ADDR 0 1 0 0 0 0 0 0 0 1 
 state_c.stop 1 0 0 0 0 0 0 0 0 1 
 
-State Machine - |top|speed_module:speed|speed:inst_speed|state
+State Machine - |top|speed:inst_speed|state
 Name state.wait_y state.wait_x state.wait_id state.math_state state.y_state state.x_state state.id_state state.idle_state 
 state.idle_state 0 0 0 0 0 0 0 0 
 state.id_state 0 0 0 0 0 0 1 1 

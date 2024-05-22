@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../png_to_mif_convert"
+		},
+		{
+			"path": "../../hex_video"
+		},
+		{
+			"path": "../../verilog/image_processing/image"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

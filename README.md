@@ -17,8 +17,8 @@ This project aims to design and implement a IP that caculate speed of cars in re
 
 - **Tracking cars using Python**: Using python for detecting and tracking cars realtime.
 - **Sending messages through UART interface**: After detecting cars on python, it will send car's information (location, id) to FPGA board using UART interface.
-- **Design RTL and functional unit that handle all messages and measure accurate  speed of sent cars**.
-- **Simulation and testing environment**: Verification by implementing on DE2 Altera board.
+- **Design RTL and functional unit that handle all messages and measure accurate speed**.
+- **Simulation and testing environment**: Verification and observing on LCD by implementing on DE2 Altera board.
 
 ## Usage
 

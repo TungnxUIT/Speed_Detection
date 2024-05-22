@@ -41,12 +41,16 @@ Verification on DE2 Altera Board:
 
 This is originally a course project at University of Information and Technology.
 
-The design works successfully on DE2-board, there still exists several issues:
+Although the design works successfully on DE2-board, there still exists several issues:
 
 Sometimes, a speed of some cars were inaccurate. I had to overcome the difference between 2D image and 3D highway. In addition, the resolution of video I used from beginning was
 low and the tool tracking cars in python also not perform well.
 
 This design can still be improved by upgrading video resolution, hardware resources and more accurate tracking tool.
+
+## Note
+
+This project did not include camera processing. All the information about tracking cars were totally conducted by Python.
 
 
 

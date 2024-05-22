@@ -25,6 +25,8 @@ This project aims to design and implement a IP that caculate speed of cars in re
 To run this work, you will need a verilog compiler such as ncverilog, Vivado, Quartus.
 As a university Project, I used Quartus and implemented it on DE2-board for verification.
 
+The file you need to compile is ***top.v*** in Speed_module folder
+
 ## Block Diagram
 
 ![example](demo/block_diagram.png)

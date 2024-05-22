@@ -1,0 +1,1385 @@
+Analysis & Synthesis report for speed_module
+Thu May 16 15:45:10 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top|lcd:lcd|state_c
+  9. State Machine - |top|speed_module:speed|speed:inst_speed|state
+ 10. State Machine - |top|uart_rx:uart|state
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |top
+ 17. Parameter Settings for User Entity Instance: uart_rx:uart
+ 18. Parameter Settings for User Entity Instance: speed_module:speed
+ 19. Parameter Settings for User Entity Instance: speed_module:speed|speed:inst_speed
+ 20. Parameter Settings for User Entity Instance: speed_module:speed|location_mem:inst_location_mem
+ 21. Parameter Settings for User Entity Instance: speed_module:speed|speed_mem:inst_speed_mem
+ 22. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod3
+ 23. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod2
+ 24. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div3
+ 25. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div2
+ 26. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div0
+ 27. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod0
+ 28. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div1
+ 29. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod1
+ 30. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div0
+ 31. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod3
+ 32. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod2
+ 33. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div3
+ 34. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod0
+ 35. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div1
+ 36. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div2
+ 37. Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod1
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu May 16 15:45:10 2024           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; speed_module                                    ;
+; Top-level Entity Name              ; top                                             ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 13,924                                          ;
+;     Total combinational functions  ; 9,788                                           ;
+;     Dedicated logic registers      ; 6,457                                           ;
+; Total registers                    ; 6457                                            ;
+; Total pins                         ; 15                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; top                ; speed_module       ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; ../uart_interface/uart_rx.v      ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/uart_interface/uart_rx.v                        ;         ;
+; speed.v                          ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/speed.v                            ;         ;
+; location_mem.v                   ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/location_mem.v                     ;         ;
+; speed_mem.v                      ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_mem.v                        ;         ;
+; speed_module.v                   ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module.v                     ;         ;
+; top.v                            ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/top.v                              ;         ;
+; lcd.v                            ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/lcd.v                              ;         ;
+; number_display.v                 ; yes             ; User Verilog HDL File        ; D:/Study/UIT/DA/DA1/verilog/Speed_module/number_display.v                   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/studyprogram/quartus/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/studyprogram/quartus/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/studyprogram/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; d:/studyprogram/quartus/quartus/libraries/megafunctions/aglobal130.inc      ;         ;
+; db/lpm_divide_45m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/lpm_divide_45m.tdf              ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/sign_div_unsign_bkh.tdf         ;         ;
+; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/alt_u_div_ove.tdf               ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/add_sub_lkc.tdf                 ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/add_sub_mkc.tdf                 ;         ;
+; db/lpm_divide_75m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/lpm_divide_75m.tdf              ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/sign_div_unsign_ekh.tdf         ;         ;
+; db/alt_u_div_uve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/alt_u_div_uve.tdf               ;         ;
+; db/lpm_divide_0dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/lpm_divide_0dm.tdf              ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/sign_div_unsign_akh.tdf         ;         ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/alt_u_div_mve.tdf               ;         ;
+; db/lpm_divide_4dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Study/UIT/DA/DA1/verilog/Speed_module/db/lpm_divide_4dm.tdf              ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 13,924 ;
+;                                             ;        ;
+; Total combinational functions               ; 9788   ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 6339   ;
+;     -- 3 input functions                    ; 2869   ;
+;     -- <=2 input functions                  ; 580    ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 9391   ;
+;     -- arithmetic mode                      ; 397    ;
+;                                             ;        ;
+; Total registers                             ; 6457   ;
+;     -- Dedicated logic registers            ; 6457   ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 15     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; clk    ;
+; Maximum fan-out                             ; 6457   ;
+; Total fan-out                               ; 60538  ;
+; Average fan-out                             ; 3.72   ;
++---------------------------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                           ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |top                                         ; 9788 (0)          ; 6457 (0)     ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |top                                                                                                                                ; work         ;
+;    |lcd:lcd|                                 ; 856 (156)         ; 104 (64)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd                                                                                                                        ; work         ;
+;       |number_display:number0|               ; 350 (32)          ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0                                                                                                 ; work         ;
+;          |lpm_divide:Div0|                   ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div0                                                                                 ; work         ;
+;             |lpm_divide_4dm:auto_generated|  ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div0|lpm_divide_4dm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_ekh:divider| ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div0|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider                       ; work         ;
+;                   |alt_u_div_uve:divider|    ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div0|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
+;          |lpm_divide:Div1|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div1                                                                                 ; work         ;
+;             |lpm_divide_0dm:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div1|lpm_divide_0dm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                       ; work         ;
+;                   |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ; work         ;
+;          |lpm_divide:Div2|                   ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div2                                                                                 ; work         ;
+;             |lpm_divide_4dm:auto_generated|  ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div2|lpm_divide_4dm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_ekh:divider| ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div2|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider                       ; work         ;
+;                   |alt_u_div_uve:divider|    ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div2|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
+;          |lpm_divide:Div3|                   ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div3                                                                                 ; work         ;
+;             |lpm_divide_0dm:auto_generated|  ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div3|lpm_divide_0dm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_akh:divider| ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div3|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                       ; work         ;
+;                   |alt_u_div_mve:divider|    ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Div3|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ; work         ;
+;          |lpm_divide:Mod0|                   ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod0                                                                                 ; work         ;
+;             |lpm_divide_75m:auto_generated|  ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod0|lpm_divide_75m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_ekh:divider| ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod0|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                       ; work         ;
+;                   |alt_u_div_uve:divider|    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod0|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
+;          |lpm_divide:Mod1|                   ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod1                                                                                 ; work         ;
+;             |lpm_divide_45m:auto_generated|  ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod1|lpm_divide_45m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_bkh:divider| ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod1|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                   |alt_u_div_ove:divider|    ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod1|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_ove:divider ; work         ;
+;          |lpm_divide:Mod2|                   ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod2                                                                                 ; work         ;
+;             |lpm_divide_75m:auto_generated|  ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod2|lpm_divide_75m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_ekh:divider| ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod2|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                       ; work         ;
+;                   |alt_u_div_uve:divider|    ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod2|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
+;          |lpm_divide:Mod3|                   ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod3                                                                                 ; work         ;
+;             |lpm_divide_45m:auto_generated|  ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod3|lpm_divide_45m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_bkh:divider| ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod3|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                   |alt_u_div_ove:divider|    ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number0|lpm_divide:Mod3|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_ove:divider ; work         ;
+;       |number_display:number1|               ; 350 (32)          ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1                                                                                                 ; work         ;
+;          |lpm_divide:Div0|                   ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div0                                                                                 ; work         ;
+;             |lpm_divide_4dm:auto_generated|  ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div0|lpm_divide_4dm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_ekh:divider| ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div0|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider                       ; work         ;
+;                   |alt_u_div_uve:divider|    ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div0|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
+;          |lpm_divide:Div1|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div1                                                                                 ; work         ;
+;             |lpm_divide_0dm:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div1|lpm_divide_0dm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                       ; work         ;
+;                   |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div1|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ; work         ;
+;          |lpm_divide:Div2|                   ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div2                                                                                 ; work         ;
+;             |lpm_divide_4dm:auto_generated|  ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div2|lpm_divide_4dm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_ekh:divider| ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div2|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider                       ; work         ;
+;                   |alt_u_div_uve:divider|    ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div2|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
+;          |lpm_divide:Div3|                   ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div3                                                                                 ; work         ;
+;             |lpm_divide_0dm:auto_generated|  ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div3|lpm_divide_0dm:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_akh:divider| ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div3|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                       ; work         ;
+;                   |alt_u_div_mve:divider|    ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Div3|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ; work         ;
+;          |lpm_divide:Mod0|                   ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod0                                                                                 ; work         ;
+;             |lpm_divide_75m:auto_generated|  ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod0|lpm_divide_75m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_ekh:divider| ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod0|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                       ; work         ;
+;                   |alt_u_div_uve:divider|    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod0|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
+;          |lpm_divide:Mod1|                   ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod1                                                                                 ; work         ;
+;             |lpm_divide_45m:auto_generated|  ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod1|lpm_divide_45m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_bkh:divider| ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod1|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                   |alt_u_div_ove:divider|    ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod1|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_ove:divider ; work         ;
+;          |lpm_divide:Mod2|                   ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod2                                                                                 ; work         ;
+;             |lpm_divide_75m:auto_generated|  ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod2|lpm_divide_75m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_ekh:divider| ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod2|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                       ; work         ;
+;                   |alt_u_div_uve:divider|    ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod2|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
+;          |lpm_divide:Mod3|                   ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod3                                                                                 ; work         ;
+;             |lpm_divide_45m:auto_generated|  ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod3|lpm_divide_45m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_bkh:divider| ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod3|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                   |alt_u_div_ove:divider|    ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd:lcd|number_display:number1|lpm_divide:Mod3|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_ove:divider ; work         ;
+;    |speed_module:speed|                      ; 8868 (0)          ; 6318 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed_module:speed                                                                                                             ; work         ;
+;       |location_mem:inst_location_mem|       ; 5561 (5561)       ; 4096 (4096)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed_module:speed|location_mem:inst_location_mem                                                                              ; work         ;
+;       |speed:inst_speed|                     ; 299 (299)         ; 158 (158)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed_module:speed|speed:inst_speed                                                                                            ; work         ;
+;       |speed_mem:inst_speed_mem|             ; 3008 (3008)       ; 2064 (2064)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|speed_module:speed|speed_mem:inst_speed_mem                                                                                    ; work         ;
+;    |uart_rx:uart|                            ; 64 (64)           ; 35 (35)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_rx:uart                                                                                                                   ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|lcd:lcd|state_c                                                                                                                                       ;
++-------------------+--------------+-------------------+---------------+-------------------+------------+------------+------------+------------+--------------+--------------+
+; Name              ; state_c.stop ; state_c.ROW2_ADDR ; state_c.WRITE ; state_c.ROW1_ADDR ; state_c.S3 ; state_c.S2 ; state_c.S1 ; state_c.S0 ; state_c.INIT ; state_c.IDLE ;
++-------------------+--------------+-------------------+---------------+-------------------+------------+------------+------------+------------+--------------+--------------+
+; state_c.IDLE      ; 0            ; 0                 ; 0             ; 0                 ; 0          ; 0          ; 0          ; 0          ; 0            ; 0            ;
+; state_c.INIT      ; 0            ; 0                 ; 0             ; 0                 ; 0          ; 0          ; 0          ; 0          ; 1            ; 1            ;
+; state_c.S0        ; 0            ; 0                 ; 0             ; 0                 ; 0          ; 0          ; 0          ; 1          ; 0            ; 1            ;
+; state_c.S1        ; 0            ; 0                 ; 0             ; 0                 ; 0          ; 0          ; 1          ; 0          ; 0            ; 1            ;
+; state_c.S2        ; 0            ; 0                 ; 0             ; 0                 ; 0          ; 1          ; 0          ; 0          ; 0            ; 1            ;
+; state_c.S3        ; 0            ; 0                 ; 0             ; 0                 ; 1          ; 0          ; 0          ; 0          ; 0            ; 1            ;
+; state_c.ROW1_ADDR ; 0            ; 0                 ; 0             ; 1                 ; 0          ; 0          ; 0          ; 0          ; 0            ; 1            ;
+; state_c.WRITE     ; 0            ; 0                 ; 1             ; 0                 ; 0          ; 0          ; 0          ; 0          ; 0            ; 1            ;
+; state_c.ROW2_ADDR ; 0            ; 1                 ; 0             ; 0                 ; 0          ; 0          ; 0          ; 0          ; 0            ; 1            ;
+; state_c.stop      ; 1            ; 0                 ; 0             ; 0                 ; 0          ; 0          ; 0          ; 0          ; 0            ; 1            ;
++-------------------+--------------+-------------------+---------------+-------------------+------------+------------+------------+------------+--------------+--------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|speed_module:speed|speed:inst_speed|state                                                                                        ;
++------------------+--------------+--------------+---------------+------------------+---------------+---------------+----------------+------------------+
+; Name             ; state.wait_y ; state.wait_x ; state.wait_id ; state.math_state ; state.y_state ; state.x_state ; state.id_state ; state.idle_state ;
++------------------+--------------+--------------+---------------+------------------+---------------+---------------+----------------+------------------+
+; state.idle_state ; 0            ; 0            ; 0             ; 0                ; 0             ; 0             ; 0              ; 0                ;
+; state.id_state   ; 0            ; 0            ; 0             ; 0                ; 0             ; 0             ; 1              ; 1                ;
+; state.x_state    ; 0            ; 0            ; 0             ; 0                ; 0             ; 1             ; 0              ; 1                ;
+; state.y_state    ; 0            ; 0            ; 0             ; 0                ; 1             ; 0             ; 0              ; 1                ;
+; state.math_state ; 0            ; 0            ; 0             ; 1                ; 0             ; 0             ; 0              ; 1                ;
+; state.wait_id    ; 0            ; 0            ; 1             ; 0                ; 0             ; 0             ; 0              ; 1                ;
+; state.wait_x     ; 0            ; 1            ; 0             ; 0                ; 0             ; 0             ; 0              ; 1                ;
+; state.wait_y     ; 1            ; 0            ; 0             ; 0                ; 0             ; 0             ; 0              ; 1                ;
++------------------+--------------+--------------+---------------+------------------+---------------+---------------+----------------+------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|uart_rx:uart|state                                                                               ;
++----------------------+---------------------+---------------------+----------------------+-----------+-----------------+
+; Name                 ; state.s_rx_stop_bit ; state.s_rx_data_bit ; state.s_rx_start_bit ; state.000 ; state.s_cleanup ;
++----------------------+---------------------+---------------------+----------------------+-----------+-----------------+
+; state.000            ; 0                   ; 0                   ; 0                    ; 0         ; 0               ;
+; state.s_rx_start_bit ; 0                   ; 0                   ; 1                    ; 1         ; 0               ;
+; state.s_rx_data_bit  ; 0                   ; 1                   ; 0                    ; 1         ; 0               ;
+; state.s_rx_stop_bit  ; 1                   ; 0                   ; 0                    ; 1         ; 0               ;
+; state.s_cleanup      ; 0                   ; 0                   ; 0                    ; 1         ; 1               ;
++----------------------+---------------------+---------------------+----------------------+-----------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++-----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal  ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------+------------------------+
+; lcd:lcd|prev_data2[0]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data2[1]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data2[2]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data2[3]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data2[4]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data2[5]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data2[6]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data2[7]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data1[0]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data1[1]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data1[2]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data1[3]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data1[4]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data1[5]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data1[6]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; lcd:lcd|prev_data1[7]                               ; lcd:lcd|state_c.IDLE ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                      ;                        ;
++-----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++----------------------------------------------+----------------------------------------------------------+
+; Register name                                ; Reason for Removal                                       ;
++----------------------------------------------+----------------------------------------------------------+
+; lcd:lcd|number_display:number1|char1[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char1[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char2[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char2[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char3[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char3[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char4[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char4[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char5[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char5[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char6[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char6[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char1[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char1[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char2[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char2[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char3[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char3[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char4[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char4[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char5[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char5[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char6[6,7]    ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char6[4,5]    ; Stuck at VCC due to stuck port data_in                   ;
+; speed_module:speed|speed:inst_speed|o_idx[8] ; Stuck at GND due to stuck port data_in                   ;
+; speed_module:speed|speed:inst_speed|o_idx[0] ; Merged with speed_module:speed|speed:inst_speed|o_id0[0] ;
+; speed_module:speed|speed:inst_speed|o_idy[0] ; Merged with speed_module:speed|speed:inst_speed|o_id0[0] ;
+; speed_module:speed|speed:inst_speed|o_idx[1] ; Merged with speed_module:speed|speed:inst_speed|o_id0[1] ;
+; speed_module:speed|speed:inst_speed|o_idy[1] ; Merged with speed_module:speed|speed:inst_speed|o_id0[1] ;
+; speed_module:speed|speed:inst_speed|o_idx[2] ; Merged with speed_module:speed|speed:inst_speed|o_id0[2] ;
+; speed_module:speed|speed:inst_speed|o_idy[2] ; Merged with speed_module:speed|speed:inst_speed|o_id0[2] ;
+; speed_module:speed|speed:inst_speed|o_idx[3] ; Merged with speed_module:speed|speed:inst_speed|o_id0[3] ;
+; speed_module:speed|speed:inst_speed|o_idy[3] ; Merged with speed_module:speed|speed:inst_speed|o_id0[3] ;
+; speed_module:speed|speed:inst_speed|o_idx[4] ; Merged with speed_module:speed|speed:inst_speed|o_id0[4] ;
+; speed_module:speed|speed:inst_speed|o_idy[4] ; Merged with speed_module:speed|speed:inst_speed|o_id0[4] ;
+; speed_module:speed|speed:inst_speed|o_idx[5] ; Merged with speed_module:speed|speed:inst_speed|o_id0[5] ;
+; speed_module:speed|speed:inst_speed|o_idy[5] ; Merged with speed_module:speed|speed:inst_speed|o_id0[5] ;
+; speed_module:speed|speed:inst_speed|o_idx[6] ; Merged with speed_module:speed|speed:inst_speed|o_id0[6] ;
+; speed_module:speed|speed:inst_speed|o_idy[6] ; Merged with speed_module:speed|speed:inst_speed|o_id0[6] ;
+; speed_module:speed|speed:inst_speed|o_idx[7] ; Merged with speed_module:speed|speed:inst_speed|o_id0[7] ;
+; speed_module:speed|speed:inst_speed|o_idy[8] ; Merged with speed_module:speed|speed:inst_speed|o_id0[7] ;
+; lcd:lcd|state_c~13                           ; Lost fanout                                              ;
+; lcd:lcd|state_c~14                           ; Lost fanout                                              ;
+; lcd:lcd|state_c~15                           ; Lost fanout                                              ;
+; lcd:lcd|state_c~16                           ; Lost fanout                                              ;
+; speed_module:speed|speed:inst_speed|state~4  ; Lost fanout                                              ;
+; speed_module:speed|speed:inst_speed|state~5  ; Lost fanout                                              ;
+; speed_module:speed|speed:inst_speed|state~6  ; Lost fanout                                              ;
+; uart_rx:uart|state~2                         ; Lost fanout                                              ;
+; uart_rx:uart|state~3                         ; Lost fanout                                              ;
+; lcd:lcd|number_display:number1|char4[2]      ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char1[2]      ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char1[2]      ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char4[2]      ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char4[3]      ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char1[3]      ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number1|char1[3]      ; Stuck at GND due to stuck port data_in                   ;
+; lcd:lcd|number_display:number0|char4[3]      ; Stuck at GND due to stuck port data_in                   ;
+; Total Number of Removed Registers = 82       ;                                                          ;
++----------------------------------------------+----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 6457  ;
+; Number of registers using Synchronous Clear  ; 100   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 6215  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 6296  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; uart_rx:uart|r_rx_received             ; 12      ;
+; uart_rx:uart|r_rx_1                    ; 1       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[255][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[254][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[253][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[252][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[251][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[250][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[249][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[248][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[247][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[246][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[245][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[244][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[243][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[242][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[241][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[240][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[239][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[238][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[237][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[236][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[235][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[234][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[233][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[232][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[231][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[230][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[229][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[228][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[227][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[226][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[225][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[224][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[223][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[222][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[221][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[220][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[219][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[218][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[217][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[216][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[215][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[214][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[213][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[212][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[211][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[210][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[209][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[208][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[207][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[206][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[205][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[204][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[203][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[202][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[201][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[200][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[199][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[198][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[197][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[196][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[195][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[194][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[193][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[192][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[191][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[190][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[189][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[188][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[187][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[186][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[185][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[184][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[183][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[182][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[181][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[180][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[179][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[178][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[177][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[176][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[175][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[174][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[173][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[172][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[171][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[170][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[169][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[168][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[167][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[166][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[165][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[164][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[163][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[162][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[161][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[160][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[159][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[158][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[157][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[156][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[155][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[154][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[153][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[152][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[151][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[150][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[149][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[148][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[147][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[146][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[145][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[144][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[143][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[142][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[141][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[140][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[139][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[138][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[137][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[136][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[135][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[134][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[133][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[132][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[131][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[130][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[129][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[128][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[127][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[126][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[125][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[124][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[123][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[122][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[121][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[120][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[119][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[118][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[117][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[116][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[115][2] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[114][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[113][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[112][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[111][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[110][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[109][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[108][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[107][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[106][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[105][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[104][7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[103][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[102][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[101][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[100][1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[99][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[98][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[97][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[96][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[95][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[94][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[93][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[92][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[91][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[90][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[89][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[88][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[87][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[86][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[85][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[84][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[83][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[82][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[81][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[80][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[79][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[78][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[77][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[76][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[75][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[74][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[73][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[72][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[71][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[70][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[69][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[68][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[67][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[66][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[65][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[64][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[63][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[62][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[61][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[60][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[59][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[58][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[57][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[56][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[55][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[54][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[53][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[52][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[51][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[50][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[49][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[48][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[47][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[46][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[45][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[44][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[43][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[42][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[41][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[40][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[39][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[38][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[37][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[36][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[35][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[34][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[33][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[32][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[31][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[30][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[29][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[28][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[27][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[26][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[25][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[24][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[23][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[22][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[21][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[20][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[19][1]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[18][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[17][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[16][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[15][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[14][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[13][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[12][7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[11][4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[10][6]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[9][6]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[8][1]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[7][5]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[6][2]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[5][0]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[4][0]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[3][3]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[2][3]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[1][3]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|speed_module:speed|location_mem:inst_location_mem|mem[0][3]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|speed_module:speed|speed:inst_speed|count0[21]                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|speed_module:speed|speed:inst_speed|count1[15]                ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |top|uart_rx:uart|r_clock_count[11]                                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|uart_rx:uart|r_bit_index                                      ;
+; 32:1               ; 4 bits    ; 84 LEs        ; 40 LEs               ; 44 LEs                 ; No         ; |top|lcd:lcd|Mux7                                                  ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |top|speed_module:speed|speed:inst_speed|o_speed                   ;
+; 256:1              ; 8 bits    ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |top|speed_module:speed|speed_mem:inst_speed_mem|Mux7              ;
+; 256:1              ; 8 bits    ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |top|speed_module:speed|speed_mem:inst_speed_mem|Mux13             ;
+; 128:1              ; 16 bits   ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; No         ; |top|speed_module:speed|location_mem:inst_location_mem|Mux15       ;
+; 258:1              ; 8 bits    ; 1376 LEs      ; 1376 LEs             ; 0 LEs                  ; No         ; |top|speed_module:speed|location_mem:inst_location_mem|Mux8        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; width          ; 8     ; Signed Integer                             ;
+; depth          ; 8     ; Signed Integer                             ;
+; divisor        ; 2604  ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:uart ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; divisor        ; 2604  ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: speed_module:speed ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; width          ; 8     ; Signed Integer                         ;
+; depth          ; 8     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: speed_module:speed|speed:inst_speed ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                          ;
+; depth          ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: speed_module:speed|location_mem:inst_location_mem ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                        ;
+; depth          ; 9     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: speed_module:speed|speed_mem:inst_speed_mem ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                  ;
+; depth          ; 8     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod3 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_45m ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod2 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div3 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div2 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_4dm ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_4dm ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div1 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod1 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_45m ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_4dm ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod3 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_45m ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Mod2 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div3 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Div1 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number0|lpm_divide:Div2 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 7              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_4dm ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd:lcd|number_display:number1|lpm_divide:Mod1 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_45m ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:14     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu May 16 15:44:53 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off speed_module -c speed_module
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /study/uit/da/da1/verilog/uart_interface/uart_rx.v
+    Info (12023): Found entity 1: uart_rx
+Info (12021): Found 1 design units, including 1 entities, in source file speed.v
+    Info (12023): Found entity 1: speed
+Info (12021): Found 1 design units, including 1 entities, in source file test.v
+    Info (12023): Found entity 1: test
+Info (12021): Found 1 design units, including 1 entities, in source file speed_tb.v
+    Info (12023): Found entity 1: speed_tb
+Info (12021): Found 1 design units, including 1 entities, in source file location_mem.v
+    Info (12023): Found entity 1: location_mem
+Info (12021): Found 1 design units, including 1 entities, in source file speed_mem.v
+    Info (12023): Found entity 1: speed_mem
+Warning (10275): Verilog HDL Module Instantiation warning at speed_module.v(83): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file speed_module.v
+    Info (12023): Found entity 1: speed_module
+Info (12021): Found 1 design units, including 1 entities, in source file speed_module_tb.v
+    Info (12023): Found entity 1: speed_module_tb
+Info (12021): Found 1 design units, including 1 entities, in source file top.v
+    Info (12023): Found entity 1: top
+Info (12021): Found 1 design units, including 1 entities, in source file top_tb.v
+    Info (12023): Found entity 1: top_tb
+Info (12021): Found 1 design units, including 1 entities, in source file lcd.v
+    Info (12023): Found entity 1: lcd
+Info (12021): Found 1 design units, including 1 entities, in source file number_display.v
+    Info (12023): Found entity 1: number_display
+Warning (10236): Verilog HDL Implicit Net warning at speed.v(238): created implicit net for "s"
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_rx.v(11): Parameter Declaration in module "uart_rx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_rx.v(12): Parameter Declaration in module "uart_rx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_rx.v(13): Parameter Declaration in module "uart_rx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_rx.v(14): Parameter Declaration in module "uart_rx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_rx.v(15): Parameter Declaration in module "uart_rx" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
+Warning (10222): Verilog HDL Parameter Declaration warning at speed_module.v(16): Parameter Declaration in module "speed_module" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart"
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(55): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(64): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(73): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(84): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "speed_module" for hierarchy "speed_module:speed"
+Info (12128): Elaborating entity "speed" for hierarchy "speed_module:speed|speed:inst_speed"
+Warning (10036): Verilog HDL or VHDL warning at speed.v(238): object "s" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at speed.v(110): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at speed.v(238): truncated value with size 3 to match size of target (1)
+Info (12128): Elaborating entity "location_mem" for hierarchy "speed_module:speed|location_mem:inst_location_mem"
+Warning (10240): Verilog HDL Always Construct warning at location_mem.v(20): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "speed_mem" for hierarchy "speed_module:speed|speed_mem:inst_speed_mem"
+Warning (10240): Verilog HDL Always Construct warning at speed_mem.v(23): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "lcd" for hierarchy "lcd:lcd"
+Warning (10240): Verilog HDL Always Construct warning at lcd.v(157): inferring latch(es) for variable "prev_data1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at lcd.v(157): inferring latch(es) for variable "prev_data2", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "prev_data2[0]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data2[1]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data2[2]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data2[3]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data2[4]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data2[5]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data2[6]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data2[7]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data1[0]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data1[1]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data1[2]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data1[3]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data1[4]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data1[5]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data1[6]" at lcd.v(157)
+Info (10041): Inferred latch for "prev_data1[7]" at lcd.v(157)
+Info (12128): Elaborating entity "number_display" for hierarchy "lcd:lcd|number_display:number0"
+Warning (10230): Verilog HDL assignment warning at number_display.v(15): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at number_display.v(32): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at number_display.v(49): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at number_display.v(66): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at number_display.v(83): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at number_display.v(100): truncated value with size 32 to match size of target (4)
+Info (278001): Inferred 16 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number1|Mod3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number1|Mod2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number1|Div3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number1|Div2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number0|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number0|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number0|Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number0|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number1|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number0|Mod3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number0|Mod2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number0|Div3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number1|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number1|Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number0|Div2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "lcd:lcd|number_display:number1|Mod1"
+Info (12130): Elaborated megafunction instantiation "lcd:lcd|number_display:number1|lpm_divide:Mod3"
+Info (12133): Instantiated megafunction "lcd:lcd|number_display:number1|lpm_divide:Mod3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_45m.tdf
+    Info (12023): Found entity 1: lpm_divide_45m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info (12023): Found entity 1: add_sub_lkc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info (12023): Found entity 1: add_sub_mkc
+Info (12130): Elaborated megafunction instantiation "lcd:lcd|number_display:number1|lpm_divide:Mod2"
+Info (12133): Instantiated megafunction "lcd:lcd|number_display:number1|lpm_divide:Mod2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_75m.tdf
+    Info (12023): Found entity 1: lpm_divide_75m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_ekh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uve.tdf
+    Info (12023): Found entity 1: alt_u_div_uve
+Info (12130): Elaborated megafunction instantiation "lcd:lcd|number_display:number1|lpm_divide:Div3"
+Info (12133): Instantiated megafunction "lcd:lcd|number_display:number1|lpm_divide:Div3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_0dm.tdf
+    Info (12023): Found entity 1: lpm_divide_0dm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
+    Info (12023): Found entity 1: alt_u_div_mve
+Info (12130): Elaborated megafunction instantiation "lcd:lcd|number_display:number1|lpm_divide:Div2"
+Info (12133): Instantiated megafunction "lcd:lcd|number_display:number1|lpm_divide:Div2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4dm.tdf
+    Info (12023): Found entity 1: lpm_divide_4dm
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "lcd_on" is stuck at VCC
+    Warning (13410): Pin "lcd_rw" is stuck at GND
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 13945 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 13930 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4656 megabytes
+    Info: Processing ended: Thu May 16 15:45:10 2024
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:16
+
+

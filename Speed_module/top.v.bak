@@ -1,0 +1,36 @@
+module top#(
+	parameter width = 8,
+	parameter depth = 6,
+	parameter divisor = 1406
+)(
+	input 					clk,
+	input 					rst_n,
+	//input 					start,
+	input						i_rx_serial,
+	input[depth - 1:0]	i_rdaddr_speed,
+	output[width - 1:0] 	o_speed,
+	output					rx_finish
+);
+
+wire[width - 1:0]		car_data;
+wire 						rx_done;
+
+uart_rx#(.divisor(divisor)) uart(
+	.i_clock(clk),
+	.i_rx_serial(i_rx_serial),
+	.o_rx_data(car_data),
+	.o_rx_done(rx_done)
+);
+
+speed_module#(.width(width), .depth(depth)) speed(
+	.clk(clk),
+	.rst_n(rst_n),
+	.start(rx_done),
+	.i_rdaddr_speed(i_rdaddr_speed),
+	.i_car(car_data),
+	.o_speed(o_speed),
+);
+
+assign rx_finish = rx_done;
+
+endmodule

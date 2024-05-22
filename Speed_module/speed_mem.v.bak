@@ -1,0 +1,40 @@
+module speed_mem#(
+	parameter width = 8,
+	parameter depth = 8
+)
+(
+	input clk,
+	input rst_n,
+	input[width - 1:0] 		i_speed,
+	input[depth - 1:0] 		i_addr_speed,
+	input							wen,
+	output reg[width - 1:0]	o_speed,
+	output reg[depth - 1:0]	o_id
+)
+
+reg[width - 1:0] register [depth - 1:0];
+integer i;
+
+always@(posedge clk or negedge rst_n) begin
+	if(!rst_n) 
+		for(i = 0; i < depth; i = i + 1)
+			register[i] <= 0;
+	else begin
+		if(wen) begin
+			register[i_addr_speed] <= i_speed;
+		end
+	end
+end
+
+always@* begin
+	if(!wen) begin
+		o_speed <= register[i_addr_speed];
+		o_id <= i_addr_speed;
+	end
+	else begin
+		o_speed <= 0;
+		o_id <= 0;
+	end
+end
+
+endmodule

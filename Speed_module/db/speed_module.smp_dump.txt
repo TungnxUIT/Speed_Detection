@@ -1,0 +1,32 @@
+
+State Machine - |top|lcd:lcd|state_c
+Name state_c.stop state_c.ROW2_ADDR state_c.WRITE state_c.ROW1_ADDR state_c.S3 state_c.S2 state_c.S1 state_c.S0 state_c.INIT state_c.IDLE 
+state_c.IDLE 0 0 0 0 0 0 0 0 0 0 
+state_c.INIT 0 0 0 0 0 0 0 0 1 1 
+state_c.S0 0 0 0 0 0 0 0 1 0 1 
+state_c.S1 0 0 0 0 0 0 1 0 0 1 
+state_c.S2 0 0 0 0 0 1 0 0 0 1 
+state_c.S3 0 0 0 0 1 0 0 0 0 1 
+state_c.ROW1_ADDR 0 0 0 1 0 0 0 0 0 1 
+state_c.WRITE 0 0 1 0 0 0 0 0 0 1 
+state_c.ROW2_ADDR 0 1 0 0 0 0 0 0 0 1 
+state_c.stop 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|speed_module:speed|speed:inst_speed|state
+Name state.wait_y state.wait_x state.wait_id state.math_state state.y_state state.x_state state.id_state state.idle_state 
+state.idle_state 0 0 0 0 0 0 0 0 
+state.id_state 0 0 0 0 0 0 1 1 
+state.x_state 0 0 0 0 0 1 0 1 
+state.y_state 0 0 0 0 1 0 0 1 
+state.math_state 0 0 0 1 0 0 0 1 
+state.wait_id 0 0 1 0 0 0 0 1 
+state.wait_x 0 1 0 0 0 0 0 1 
+state.wait_y 1 0 0 0 0 0 0 1 
+
+State Machine - |top|uart_rx:uart|state
+Name state.s_rx_stop_bit state.s_rx_data_bit state.s_rx_start_bit state.000 state.s_cleanup 
+state.000 0 0 0 0 0 
+state.s_rx_start_bit 0 0 1 1 0 
+state.s_rx_data_bit 0 1 0 1 0 
+state.s_rx_stop_bit 1 0 0 1 0 
+state.s_cleanup 0 0 0 1 1 

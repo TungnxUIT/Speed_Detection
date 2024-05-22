@@ -1,0 +1,105 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Study\UIT\DA\DA1\verilog\Speed_module\simulation\modelsim
+vlocation_mem
+IO0G?3`oeMOOhkLb>18zNP1
+VF1K`Qh@IHMa4=gZ]P;@9a0
+Z1 dD:\Study\UIT\DA\DA1\verilog\Speed_module\simulation\modelsim
+w1712677325
+8D:/Study/UIT/DA/DA1/verilog/Speed_module/location_mem.v
+FD:/Study/UIT/DA/DA1/verilog/Speed_module/location_mem.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/Study/UIT/DA/DA1/verilog/Speed_module -O0
+!i10b 1
+!s100 hkkSil5MNTCI54T6<?gBm1
+!s85 0
+!s108 1715838943.285000
+!s107 D:/Study/UIT/DA/DA1/verilog/Speed_module/location_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/DA/DA1/verilog/Speed_module|D:/Study/UIT/DA/DA1/verilog/Speed_module/location_mem.v|
+!s101 -O0
+vspeed
+I2bT6L1Z2cbc`:ai9[G<1T1
+VXCm^PJ<RC?F;V2LNcU]<80
+R1
+w1715838929
+8D:/Study/UIT/DA/DA1/verilog/Speed_module/speed.v
+FD:/Study/UIT/DA/DA1/verilog/Speed_module/speed.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 >k?gXP5n;Fk`8cBMdl@7d2
+!s85 0
+!s108 1715838943.243000
+!s107 D:/Study/UIT/DA/DA1/verilog/Speed_module/speed.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/DA/DA1/verilog/Speed_module|D:/Study/UIT/DA/DA1/verilog/Speed_module/speed.v|
+!s101 -O0
+vspeed_mem
+I@eQ?<c@oEHD`EjaJ[=z6V1
+V8VEA:N;SAk5]DFF=:9egk3
+R1
+w1715838714
+8D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_mem.v
+FD:/Study/UIT/DA/DA1/verilog/Speed_module/speed_mem.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Bd<=dH99jcdU:PbdT4MAi3
+!s85 0
+!s108 1715838943.328000
+!s107 D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/DA/DA1/verilog/Speed_module|D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_mem.v|
+!s101 -O0
+vspeed_module
+I<kD4Ib6@2ZBUD9hnLLH^41
+V=V_[g[dD7h8cj5HeUd`^53
+R1
+w1715834050
+8D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module.v
+FD:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 M2=fOfdAiYNebOKhSWGW`0
+!s85 0
+!s108 1715838943.371000
+!s107 D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/DA/DA1/verilog/Speed_module|D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module.v|
+!s101 -O0
+vspeed_module_tb
+!i10b 1
+!s100 YB8lliTJcJ6P^PjDDU4WJ3
+IP6>8Ia1KWkB^bZhakL?SM1
+Vcz=?08nIT3Nczb5`_I>N72
+R1
+w1715836014
+8D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module_tb.v
+FD:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1715838943.446000
+!s107 D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study/UIT/DA/DA1/verilog/Speed_module|D:/Study/UIT/DA/DA1/verilog/Speed_module/speed_module_tb.v|
+!s101 -O0
+R3
+R4

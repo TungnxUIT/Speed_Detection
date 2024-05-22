@@ -1,0 +1,77 @@
+`timescale 1ns/1ps
+
+module testbench;
+
+    // Parameters
+    parameter WIDTH = 9;
+    parameter DEPTH = 9;
+
+    // Signals
+    reg clk;
+    reg rst_n;
+    reg start;
+	 reg i_rdaddr_speed;
+    reg [WIDTH-1:0] i_car;
+    wire [WIDTH-1:0] o_speed;
+    wire [DEPTH-1:0] o_id;
+
+    // Instantiate the module under test
+    speed_module #(
+        .width(WIDTH),
+        .depth(DEPTH)
+    ) dut (
+        .clk(clk),
+        .rst_n(rst_n),
+        .start(start),
+        .i_car(i_car),
+        .o_speed(o_speed),
+        .o_id(o_id)
+    );
+
+    // Clock generation
+    always #5 clk = ~clk;
+
+    // Reset generation
+    initial begin
+    // Initialize inputs
+    clk = 0;
+    rst_n = 0;
+    start = 0;
+    i_car = 0;
+    i_x = 0;
+    i_y = 0;
+
+    // Reset
+    #10 rst_n = 1;
+
+    // Testcase 1: Set inputs and start calculation
+	 #20 i_car = 9'd100; // Example input value
+		  i_y = 354; i_x = 100;
+    #20 start = 1;
+	 #5
+	 #10 i_car = 9'd100;	//x
+	 #10 i_car = 9'd310;	//y
+	 
+	 // Testcase 2
+	 #20 i_car = 9'd50;
+		  i_y = 245;
+	 #10 i_car = 9'd100; //x
+	 #10 i_car = 9'd202; //y	
+	 
+	 // Testcase 3
+	 #20 i_car = 9'd20;
+		  i_y = 210;
+	 #10 i_car = 9'd100;
+	 #10 i_car = 9'd250;
+
+    // Additional testcases can be added here with appropriate delay and input values
+
+    // End simulation
+    //#100 $finish;
+	 $stop;
+  end
+
+    // Monitor
+    // You can add code here to monitor the outputs if needed
+
+endmodule

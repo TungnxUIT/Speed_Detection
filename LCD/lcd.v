@@ -3,6 +3,8 @@ module lcd(
 	input	rst_n	,
 	input [7:0] data1,
 	input [7:0] data2,
+	input [7:0] data3,
+	input [7:0] data4,
 	
 	output wire lcd_on,
 	output	reg lcd_rs		,
@@ -66,7 +68,7 @@ module lcd(
 			char_cnt <= 0;
 		end
 		else if (state_c==WRITE && cnt==17'd50_000 - 1) begin
-			if (char_cnt==5'd14) begin
+			if (char_cnt==5'd19) begin
 				char_cnt <= 5'd0;
 			end
 			else begin
@@ -75,8 +77,11 @@ module lcd(
 		end
 	end
 reg [7:0] char1, char2, char3, char4, char5, char6;
+reg [7:0] char7, char8, char9, char10, char11, char12;
 wire [7:0] char1t, char2t, char3t, char4t, char5t, char6t;
-number_display number(.clk(clk),.data1(data1),.data2(data2),.char1(char1t),.char2(char2t),.char3(char3t),.char4(char4t),.char5(char5t),.char6(char6t));
+wire [7:0] char7t, char8t, char9t, char10t, char11t, char12t;
+number_display number0(.clk(clk),.data1(data1),.data2(data2),.char1(char1t),.char2(char2t),.char3(char3t),.char4(char4t),.char5(char5t),.char6(char6t));
+number_display number1(.clk(clk),.data1(data3),.data2(data4),.char1(char7t),.char2(char8t),.char3(char9t),.char4(char10t),.char5(char11t),.char6(char12t));
 always @(*) begin
 	char1 <= char1t;
 	char2 <= char2t;
@@ -84,25 +89,36 @@ always @(*) begin
 	char4 <= char4t;
 	char5 <= char5t;
 	char6 <= char6t;
+	char7 <= char7t;
+	char8 <= char8t;
+	char9 <= char9t;
+	char10 <= char10t;
+	char11 <= char11t;
+	char12 <= char12t;
 end
 	always @(*) begin
 		case(char_cnt)
-			5'd0: data_display   = "S";
-			5'd1: data_display   = "p";
-			5'd2: data_display   = "e";
-			5'd3: data_display   = "e";
-			5'd4: data_display   = "d";
-			5'd5: data_display   = ":";
-			5'd6: data_display   = char1;
-			5'd7: data_display   = char2;
-			5'd8: data_display   = char3;
-			5'd9: data_display   = "I";
-			5'd10: data_display  = "D";
-			5'd11: data_display  = ":";
-			5'd12: data_display  = char4;
-			5'd13: data_display  = char5;
-			5'd14: data_display  = char6;
-			default:data_display = " ";
+			5'd0: data_display   = char1;
+			5'd1: data_display   = char2;
+			5'd2: data_display   = char3;
+			5'd3: data_display   = " ";
+			5'd4: data_display   = " ";
+			5'd5: data_display   = " ";
+			5'd6: data_display   = " ";
+			5'd7: data_display   = char4;
+			5'd8: data_display   = char5;
+			5'd9: data_display   = char6;
+			5'd10: data_display   = char7;
+			5'd11: data_display   = char8;
+			5'd12: data_display   = char9;
+			5'd13: data_display  = " ";
+			5'd14: data_display  = " ";
+			5'd15: data_display  = " ";
+			5'd16: data_display  = " ";
+			5'd17: data_display  = char10;
+			5'd18: data_display  = char11;
+			5'd19: data_display  = char12;
+			default: data_display = " ";
 		endcase
 	end
  
@@ -176,10 +192,10 @@ end
 				end
 			WRITE		:
 				begin
-					if (char_cnt==5'd8) begin
+					if (char_cnt==5'd9) begin
 						state_n = ROW2_ADDR;
 					end
-					else if (char_cnt==5'd14) begin
+					else if (char_cnt==5'd19) begin
 						state_n = stop;
 					end
 					else begin

@@ -35,7 +35,11 @@ The file you need to compile is ***top.v*** in Speed_module folder
 
 Verification on DE2 Altera Board:
 
+![example](demo/lcd_demo.jpg)
 
+Detecting cars poses ID 28, 18 and measuring their speed.
+
+![example](demo/demo2.png)
 
 ## Background
 

@@ -66,7 +66,7 @@ module lcd(
 			char_cnt <= 0;
 		end
 		else if (state_c==WRITE && cnt==17'd50_000 - 1) begin
-			if (char_cnt==5'd15) begin
+			if (char_cnt==5'd14) begin
 				char_cnt <= 5'd0;
 			end
 			else begin

@@ -1,5 +1,0 @@
-
-State Machine - |top_level_v2|processing:inst_Process|mode
-Name mode.grayscale 
-mode.normal 0 
-mode.grayscale 1 
